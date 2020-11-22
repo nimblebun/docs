@@ -1,0 +1,110 @@
+@import 'globals';
+@import 'colors';
+
+.document {
+  .toc {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #f2f2f2;
+    overflow-y: auto;
+    width: $toc-width;
+    padding: 3em 1em;
+    padding-top: 4em;
+
+    h1 {
+      font-size: 1.2em;
+      color: #555;
+      margin: 0;
+    }
+
+    ul {
+      list-style: upper-roman;
+      padding-left: 1.5em;
+
+      ul {
+        list-style: upper-alpha;
+
+        ul {
+          list-style: lower-roman;
+        }
+      }
+    }
+
+    @media only screen and ( max-width: $toc-width + 1050px ) {
+      width: $toc-width-condensed;
+    }
+
+    @media only screen and ( max-width: $toc-width-condensed + 880px ) {
+      position: relative;
+      width: auto;
+      margin-bottom: 3em;
+    }
+  }
+
+  .wrapper {
+    .title {
+      margin-bottom: 3em;
+
+      img, h1 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 100px;
+        margin-right: 20px;
+      }
+
+      h1 {
+        width: calc(100% - 120px)
+      }
+
+      @media only screen and ( max-width: $toc-width-condensed + 880px ) {
+        img, h1 {
+          display: block;
+        }
+
+        img {
+          margin-right: 0;
+          margin: 0 auto;
+        }
+
+        h1 {
+          width: auto;
+        }
+      }
+    }
+
+    .date {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+
+      &.level-draft {
+        color: $draft-color;
+      }
+
+      &.level-release {
+        color: $release-color;
+      }
+    }
+  }
+
+  .backToTop {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.8em;
+    text-align: center;
+    font-size: 1.1em;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, .45);
+    display: none;
+
+    @media only screen and ( max-width: $toc-width-condensed + 880px ) {
+      display: block;
+    }
+  }
+}

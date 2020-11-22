@@ -1,0 +1,120 @@
+@import './colors';
+
+$highlight-background: #2d2d2d;
+$highlight-current-line: #393939;
+$highlight-selection: #515151;
+$highlight-foreground: #ccc;
+$highlight-comment: #999;
+$highlight-red: #f2777a;
+$highlight-orange: #f99157;
+$highlight-yellow: #fc6;
+$highlight-green: #9c9;
+$highlight-aqua: #6cc;
+$highlight-blue: #69c;
+$highlight-purple: #c9c;
+
+%code-block {
+  background: $highlight-background;
+  padding: 15px 20px;
+  overflow: auto;
+  color: $highlight-foreground;
+  line-height: 16px * 1.6;
+}
+
+%line-numbers {
+  color: #666;
+  font-size: 0.85em;
+  user-select: none;
+}
+
+pre, code {
+  font-family: 'Source Code Pro', 'Courier New', courier, monospace;
+}
+
+code {
+  background: #eee;
+  text-shadow: 0 1px #fff;
+  padding: 0 0.3em;
+}
+
+pre {
+  @extend %code-block;
+
+  code {
+    background: none;
+    text-shadow: none;
+    padding: 0;
+  }
+}
+
+.hljs {
+  @extend %code-block;
+  margin: 25px 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+pre {
+  .hljs-comment, .hljs-title {
+    color: $highlight-comment;
+  }
+
+  .hljs-variable,
+  .hljs-attribute,
+  .hljs-tag,
+  .hljs-regexp,
+  .hljs-ruby .hljs-constant,
+  .hljs-xml .hljs-tag .hljs-title,
+  .hljs-xml .hljs-pi,
+  .hljs-xml .hljs-doctype,
+  .hljs-html .hljs-doctype,
+  .hljs-css .hljs-id,
+  .hljs-css .hljs-class,
+  .hljs-css .hljs-pseudo {
+    color: $highlight-red;
+  }
+
+  .hljs-number,
+  .hljs-preprocessor,
+  .hljs-built_in,
+  .hljs-literal,
+  .hljs-params,
+  .hljs-constant {
+    color: $highlight-orange;
+  }
+
+  .hljs-class,
+  .hljs-ruby .hljs-class .hljs-title,
+  .hljs-css .hljs-rules .hljs-attribute {
+    color: $highlight-green;
+  }
+
+  .hljs-string,
+  .hljs-value,
+  .hljs-inheritance,
+  .hljs-header,
+  .hljs-ruby .hljs-symbol,
+  .hljs-xml .hljs-cdata {
+    color: $highlight-green;
+  }
+
+  .hljs-css .hljs-hexcolor {
+    color: $highlight-aqua;
+  }
+
+  .hljs-function,
+  .hljs-python .hljs-decorator,
+  .hljs-python .hljs-title,
+  .hljs-ruby .hljs-function .hljs-title,
+  .hljs-ruby .hljs-title .hljs-keyword,
+  .hljs-perl .hljs-sub,
+  .hljs-javascript .hljs-title,
+  .hljs-coffeescript .hljs-title {
+    color: $highlight-blue;
+  }
+
+  .hljs-keyword,
+  .hljs-javascript .hljs-function {
+    color: $highlight-purple;
+  }
+}

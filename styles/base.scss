@@ -1,0 +1,98 @@
+@import './colors';
+@import './globals';
+@import './highlight';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-hover;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+@media only screen and ( max-width: 860px ) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+}
+
+main {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 3em 0;
+
+  &.document {
+    margin-left: $toc-width + 30px;
+    padding: 0.5em 0;
+
+    @media only screen and ( max-width: $toc-width + 1050px ) {
+      width: 860px;
+      margin-left: $toc-width-condensed + 20px;
+    }
+
+    @media only screen and ( max-width: $toc-width-condensed + 880px ) {
+      width: auto;
+      padding: 1em;
+      margin-left: 0;
+      padding-bottom: 6em;
+    }
+  }
+
+  @media only screen and ( max-width: 1020px ) {
+    width: 860px;
+  }
+
+  @media only screen and ( max-width: 860px ) {
+    width: auto;
+    padding: 1em;
+  }
+}
