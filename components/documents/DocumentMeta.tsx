@@ -24,8 +24,8 @@ const parseEditor = (editor: string): Editor => {
 };
 
 const DocumentMeta = ({ slug, editors }: DocumentMetaProps) => {
-  const latestVersion = `https://docs.nimblebun.works/${slug}/`;
-  const editorsDraft = `https://nimblebun.github.io/docs/${slug}/`;
+  const latestVersion = `https://docs.nimblebun.works/${slug}`;
+  const editorsDraft = `https://nimblebun.github.io/docs/${slug}`;
 
   const gitHistory = `https://github.com/nimblebun/docs/commits/master/content/${slug}.md`;
 
