@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint . --ext .ts --ext .tsx",
     "export": "npm run build && next export",
     "export:draft": "cross-env NEXT_PUBLIC_DRAFT_LEVEL=draft APP_PREFIX=/docs npm run export",
     "export:release": "cross-env NEXT_PUBLIC_DRAFT_LEVEL=release npm run export"

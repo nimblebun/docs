@@ -1,6 +1,6 @@
 import DocumentList from '@/components/documents/DocumentList';
-import Meta from '@/components/Meta'
-import TheHeader from '@/components/the-header/TheHeader'
+import Meta from '@/components/Meta';
+import TheHeader from '@/components/the-header/TheHeader';
 import { fetchDocuments, IDocument } from '@/lib/documents';
 
 const Home = ({ documents }: { documents: IDocument[] }) => {
