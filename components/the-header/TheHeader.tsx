@@ -4,7 +4,7 @@ const TheHeader = () => {
   return (
     <header className={styles.wrapper}>
       <div className={styles.logo}>
-        <img src="/assets/logo.png" alt="Nimble Bun Works" />
+        <img src="assets/logo.png" alt="Nimble Bun Works" />
       </div>
 
       <div className={styles.sitename}>
