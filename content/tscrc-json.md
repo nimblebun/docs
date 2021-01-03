@@ -1,7 +1,7 @@
 ---
 title: TSC Run Configuration JSON (.tscrc.json) Specification
 icon: 'tscrc.png'
-date: '22 November 2020'
+date: '02 January 2021'
 editors:
   - József Sallai (Nimble Bun Works<https://nimblebun.works>)
   - Bryan Barreto (Nimble Bun Works<https://nimblebun.works>)
@@ -106,9 +106,12 @@ This property is optional. If missing, the language server will generate an inse
 
 This array specifies the type of each argument of a TSC command. When not provided (or empty), the command does not have any arguments. The language server will provide argument-related information based on this array. An argument type must be a valid TSCRC definition type or a custom type. If an invalid type is provided, it will be interpreted as a generic `number` type.
 
+If an argument is an event ID, its argument type should be `event`. This type works the same way as the `number` type, which automatically means explicit definitions of event descriptions cannot be created in the run configuration. This special type is used by the language server in tandem with event symbols.
+
 **Generic argument types:**
 
 - number
+- event
 - direction
 - face
 - map
