@@ -55,7 +55,7 @@ This property defines the maximum length of a message line when the message box 
 This property instructs the language server to avoid performing strict checking on the values passed as event IDs. Strict checking means:
 
 - Event IDs must be 4 digits
-- Arguments must be 4 digits or V + 3 digits (`for <VAR support`)
+- Arguments must be 4 digits or V + 3 digits (for `<VAR` support)
 
 Loose checking will eliminate these requirements, therefore any 4 characters will be accepted as valid characters.
 
