@@ -1,7 +1,7 @@
 ---
 title: TSC Run Configuration JSON (.tscrc.json) Specification
 icon: 'tscrc.png'
-date: '02 January 2021'
+date: '04 April 2021'
 editors:
   - József Sallai (Nimble Bun Works<https://nimblebun.works>)
   - Bryan Barreto (Nimble Bun Works<https://nimblebun.works>)
@@ -47,6 +47,34 @@ This property defines the maximum length of a message line when the message box 
 **(number, optional)**
 
 This property defines the maximum length of a message line when the message box is accompanied by a portrait. The value of this property in the default configuration is **28**.
+
+### setup.looseChecking
+
+**(object, optional)**
+
+This property instructs the language server to avoid performing strict checking on the values passed as event IDs. Strict checking means:
+
+- Event IDs must be 4 digits
+- Arguments must be 4 digits or V + 3 digits (`for <VAR support`)
+
+Loose checking will eliminate these requirements, therefore any 4 characters will be accepted as valid characters.
+
+**Properties:**
+
+- [`events`](#setup-loose-checking-events)
+- [`portrait`](#setup-loose-checking-arguments)
+
+### setup.looseChecking.events
+
+**(boolean, optional)**
+
+Specifies whether the event IDs should be checked loosely. The value of this property in the default configuration is **`false`**.
+
+### setup.looseChecking.arguments
+
+**(boolean, optional)**
+
+Specifies whether the command arguments should be checked loosely. The value of this property in the default configuration is **`false`**.
 
 ### tsc
 
